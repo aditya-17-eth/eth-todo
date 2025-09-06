@@ -1,23 +1,30 @@
-# 🏗 Scaffold-ETH 2
+# Ethereum To-Do List DApp
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+A simple decentralized to-do list application running on the Ethereum blockchain. Built with Scaffold-ETH 2.
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+## Description
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+This is a simple decentralized application (DApp) that allows users to create and manage a to-do list. The list is stored on the Ethereum blockchain, making it censorship-resistant and always available.
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+## Tech Stack
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+- [NextJS](https://nextjs.org/)
+- [RainbowKit](https://www.rainbowkit.com/)
+- [Hardhat](https://hardhat.org/)
+- [Wagmi](https://wagmi.sh/)
+- [Viem](https://viem.sh/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-## Requirements
+## Features
+
+- Create a new task.
+- View all your tasks.
+- Mark a task as completed.
+- See the total number of tasks.
+
+## Getting Started
+
+### Prerequisites
 
 Before you begin, you need to install the following tools:
 
@@ -25,56 +32,55 @@ Before you begin, you need to install the following tools:
 - Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
 - [Git](https://git-scm.com/downloads)
 
-## Quickstart
+### Installation
 
-To get started with Scaffold-ETH 2, follow the steps below:
+1.  Clone the repo:
+    ```sh
+    git clone <YOUR_REPO_URL>
+    ```
+2.  Navigate to the project directory:
+    ```sh
+    cd eth-todo
+    ```
+3.  Install dependencies:
+    ```sh
+    yarn install
+    ```
 
-1. Install dependencies if it was skipped in CLI:
+## Usage
 
-```
-cd my-dapp-example
-yarn install
-```
+1.  **Start a local network:**
+    In a new terminal, run:
+    ```sh
+    yarn chain
+    ```
+    This will start a local Hardhat network.
 
-2. Run a local network in the first terminal:
+2.  **Deploy the smart contract:**
+    In a second terminal, run:
+    ```sh
+    yarn deploy
+    ```
+    This will deploy the `TodoList` contract to the local network.
 
-```
-yarn chain
-```
+3.  **Start the frontend:**
+    In a third terminal, run:
+    ```sh
+    yarn start
+    ```
+    This will start the Next.js development server. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `packages/hardhat/hardhat.config.ts`.
+## Project Structure
 
-3. On a second terminal, deploy the test contract:
+The project is a monorepo with two main packages:
 
-```
-yarn deploy
-```
+-   `packages/hardhat`: Contains the smart contract code, deployment scripts, and tests.
+-   `packages/nextjs`: Contains the frontend Next.js application.
 
-This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
+## Contributing
 
-4. On a third terminal, start your NextJS app:
+Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
 
-```
-yarn start
-```
+## License
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
-
-Run smart contract test with `yarn hardhat:test`
-
-- Edit your smart contracts in `packages/hardhat/contracts`
-- Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
-- Edit your deployment scripts in `packages/hardhat/deploy`
-
-
-## Documentation
-
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
-
-To know more about its features, check out our [website](https://scaffoldeth.io).
-
-## Contributing to Scaffold-ETH 2
-
-We welcome contributions to Scaffold-ETH 2!
-
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+This project is licensed under the [MIT License](LICENCE).
