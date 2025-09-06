@@ -1,1 +1,1 @@
-yarn lint-staged --verbos
+yarn lint-staged --verbose
