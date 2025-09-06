@@ -77,10 +77,6 @@ The project is a monorepo with two main packages:
 -   `packages/hardhat`: Contains the smart contract code, deployment scripts, and tests.
 -   `packages/nextjs`: Contains the frontend Next.js application.
 
-## Contributing
-
-Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
-
 ## License
 
 This project is licensed under the [MIT License](LICENCE).
